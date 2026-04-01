@@ -8,7 +8,7 @@ const orderSchema = new mongoose.Schema({
     price: Number
   }],
   totalAmount: Number,
-  status: { type: String, enum: ['pending', 'paid', 'failed'], default: 'pending' },
+  status: { type: String, enum: ['pending', 'paid', 'failed', 'cancelled'], default: 'pending' },
   paymentLinkId: String,   // PayMongo payment link ID
   paymentLinkUrl: String,  // URL to redirect user to pay
 }, { timestamps: true });
